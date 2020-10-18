@@ -1,0 +1,44 @@
+body {
+  color: white;
+}
+
+
+mat-tab {
+  width: 100%;
+}
+
+p {
+  font-size: 20px;
+}
+
+th {
+
+  font-size: 20px;
+}
+
+td {
+  font-size: 20px;
+}
+
+table {
+  margin-left: 100px;
+  width: 1000px;
+  background-color: black;
+}
+
+mat-list-item {
+  margin-top: 20px;
+}
+input {
+  height: 25px;
+}
+
+
+mat-form-field {
+  margin-top: 15px;
+}
+
+button:hover {
+  color: yellow;
+}
+

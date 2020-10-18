@@ -1,0 +1,18 @@
+<body>
+<mat-list>
+  <p mat-line>Route: {{routeInfo.departurePlace.name}} - {{routeInfo.arrivalPlace.name}}</p>
+  <p mat-line>Date: {{routeInfo.departureDate}} - {{routeInfo.arrivalDate}}</p>
+  <p mat-line>Current number of passengers: {{routeInfo.numberOfPassengers}}</p>
+  <p mat-line>Amount of tickets: {{numberOfPassengers}}</p>
+</mat-list>
+
+<mat-divider></mat-divider>
+<div class="email-button">
+
+<mat-form-field appearance="outline">
+  <mat-label>Email</mat-label>
+  <input matInput [(ngModel)]="email" type="email" required>
+</mat-form-field>
+<button mat-line mat-stroked-button (click)="buyTicket()">Confirm and buy</button>
+</div>
+</body>

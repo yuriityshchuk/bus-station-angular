@@ -1,0 +1,41 @@
+<mat-tab-group>
+  <mat-tab label="User">
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Registration date</th>
+        <th>Block</th>
+      </tr>
+      <tr *ngFor="let user of users">
+        <td>{{user.firstName}} {{user.lastName}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.registrationDate | date: 'shortDate'}}</td>
+        <td *ngIf="user.locked">BLOCKED</td>
+        <td *ngIf="!user.locked"> <mat-icon aria-hidden="false" (click)="blockUser(user.id)">delete</mat-icon></td>
+      </tr>
+    </table>
+  </mat-tab>
+  <mat-tab label="Ticket">
+    <table>
+      <tr>
+        <th>Id</th>
+        <th>Status</th>
+        <th>Buy date</th>
+        <th>Route</th>
+        <th>Time</th>
+        <th>Change to inactive</th>
+      </tr>
+      <tr *ngFor="let ticket of tickets">
+        <td>{{ticket.id}}</td>
+        <td>{{ticket.status}}</td>
+        <td>{{ticket.buyTime | date: 'shortDate'}}</td>
+        <td>{{ticket.route.departurePlace.name}} - {{ticket.route.arrivalPlace.name}}</td>
+        <td>{{ticket.route.departureDate | date:'shortDate'}} - {{ticket.route.arrivalDate | date: 'shortDate'}}</td>
+        <td> <mat-icon aria-hidden="false" (click)="setTicketInActive(ticket.id)">delete</mat-icon></td>
+      </tr>
+    </table>
+  </mat-tab>
+</mat-tab-group>

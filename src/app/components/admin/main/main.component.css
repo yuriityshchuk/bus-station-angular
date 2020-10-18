@@ -1,0 +1,36 @@
+body {
+  color: white;
+}
+
+
+mat-tab-group {
+  color: white;
+}
+
+p {
+  color: white;
+}
+
+
+mat-tab {
+  width: 100%;
+}
+
+p {
+  font-size: 20px;
+}
+
+th {
+
+  font-size: 20px;
+}
+
+td {
+  font-size: 20px;
+}
+
+table {
+  margin-left: 100px;
+  width: 1000px;
+  background-color: black;
+}

@@ -1,0 +1,70 @@
+<body>
+
+<mat-tab-group>
+  <mat-tab label="User info">
+    <p>Name: {{user.firstName}} {{user.lastName}}</p>
+    <p>Username: {{user.username}}</p>
+    <p>Registration date: {{user.registrationDate | date}}</p>
+    <p>Email: {{user.email}}</p>
+
+  </mat-tab>
+  <mat-tab label="Tickets">
+    <table class="table table-striped table-dark">
+      <tr>
+        <th>Buy date</th>
+        <th>Status</th>
+        <th>Email</th>
+        <th>Route</th>
+        <th>Time</th>
+      </tr>
+      <tr *ngFor="let ticket of user.ticketList">
+        <td>{{ticket.buyTime | date: 'shortDate'}}</td>
+        <td>{{ticket.status}}</td>
+        <td>{{ticket.clientEmail}}</td>
+        <td>{{ticket.route.departurePlace.name}} - {{ticket.route.arrivalPlace.name}}</td>
+        <td>{{ticket.route.departureDate | date: 'shortDate'}} - {{ticket.route.arrivalDate | date: 'shortDate' }}</td>
+      </tr>
+    </table>
+  </mat-tab>
+  <mat-tab label="Settings">
+    <mat-list>
+      <mat-list-item>
+        <div [hidden]="errorMessage === ''">
+          {{errorMessage}}
+        </div>
+        <h3 mat-line>Change your password</h3>
+        <mat-form-field mat-line appearance="outline">
+          <mat-label>Old password</mat-label>
+          <input mat-line matInput required type="password" [(ngModel)]="oldPassword"
+                 placeholder="Enter old password">
+        </mat-form-field>
+        <mat-form-field mat-line appearance="outline">
+          <mat-label>New password</mat-label>
+          <input mat-line matInput required type="password" [(ngModel)]="newPassword"
+                 placeholder="Enter new password">
+        </mat-form-field>
+        <button mat-line mat-stroked-button (click)="changePassword()">Change password</button>
+      </mat-list-item>
+      <br>
+      <mat-list-item>
+        <h3 mat-line>Change your email</h3>
+        <mat-form-field mat-line appearance="outline">
+          <mat-label>New email</mat-label>
+          <input matInput required type="email" [(ngModel)]="newEmail" placeholder="Enter new email">
+        </mat-form-field>
+        <button mat-line mat-stroked-button (click)="changeEmail()">Change email</button>
+      </mat-list-item>
+    </mat-list>
+  </mat-tab>
+</mat-tab-group>
+<!--<mat-list-item *ngFor="let ticket of user.ticketList">-->
+<!--  <p mat-line>{{ticket.buyTime}}</p>-->
+<!--  <p mat-line>{{ticket.status}}</p>-->
+<!--  <p mat-line>{{ticket.clientEmail}}</p>-->
+<!--  <p mat-line>{{ticket.route.departurePlace.name}}</p>-->
+<!--  <p mat-line>{{ticket.route.departureDate | date}}</p>-->
+<!--  <p mat-line>{{ticket.route.arrivalPlace.name}}</p>-->
+<!--  <p mat-line>{{ticket.route.arrivalDate | date}}</p>-->
+<!--</mat-list-item>-->
+
+</body>

@@ -1,0 +1,13 @@
+<mat-toolbar>
+  <span>Bus station</span>
+  <span class="spacer"></span>
+
+  <span><a routerLink="/route" class="nav-link" *ngIf="authenticationService.isUserLoggedIn()">Route</a></span>
+  <span><a routerLink="/user-page" class="nav-link"
+           *ngIf="authenticationService.isUserLoggedIn()">{{username}}</a></span>
+  <span><a routerLink="/admin-page" class="nav-link" *ngIf="authenticationService.isUserAdmin()">Admin page</a></span>
+
+  <span><a routerLink="/login" class="nav-link" *ngIf="!authenticationService.isUserLoggedIn()">Login</a></span>
+  <span><a routerLink="/register" class="nav-link" *ngIf="!authenticationService.isUserLoggedIn()">Register</a></span>
+  <span><a (click)="logoutUser()" class="nav-link" *ngIf="authenticationService.isUserLoggedIn()">Logout</a></span>
+</mat-toolbar>

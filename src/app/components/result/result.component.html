@@ -1,0 +1,11 @@
+<body>
+<mat-list *ngIf="routes.length > 0">
+  <mat-list-item *ngFor="let route of routes">
+    <p mat-line>{{route.departurePlace.name}} - {{route.arrivalPlace.name}}</p>
+    <p mat-line>{{route.departureDate}} - {{route.arrivalDate}}</p>
+    <p mat-line>Number of passengers: {{route.numberOfPassengers}}</p>
+    <button mat-line mat-stroked-button (click)="openBuyDialog(route.id)">Buy</button>
+  </mat-list-item>
+</mat-list>
+</body>
+

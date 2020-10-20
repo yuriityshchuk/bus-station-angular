@@ -1,31 +1,43 @@
+<p>First name: </p>
 <mat-form-field appearance="outline">
   <mat-label>First name</mat-label>
   <input matInput placeholder="Passengers" type="text" name="firstName"
          [(ngModel)]="user.firstName"/>
 </mat-form-field>
+
+<p>Last name: </p>
 <mat-form-field appearance="outline">
   <mat-label>Last name</mat-label>
   <input matInput placeholder="Passengers" type="text" name="lastName"
          [(ngModel)]="user.lastName"/>
 </mat-form-field>
+
+<p>Username: </p>
 <mat-form-field appearance="outline">
   <mat-label>Username</mat-label>
   <input matInput placeholder="Username" type="text" name="username"
          [(ngModel)]="user.username"/>
 </mat-form-field>
+
+<p>Password: </p>
 <mat-form-field appearance="outline">
   <mat-label>Password</mat-label>
   <input matInput placeholder="Password" type="password" name="password"
          [(ngModel)]="user.password"/>
 </mat-form-field>
+
+<p>Repeat password: </p>
 <mat-form-field appearance="outline">
   <mat-label>Repeat password</mat-label>
   <input matInput placeholder="Repeat password" type="password" name="repeatedPassword"
          [(ngModel)]="user.repeatedPassword"/>
 </mat-form-field>
+
+<p>Email: </p>
 <mat-form-field appearance="outline">
   <mat-label>Email</mat-label>
   <input matInput placeholder="Email" type="email" name="email"
          [(ngModel)]="user.email"/>
 </mat-form-field>
-<button mat-stroked-button (click)="register()">Search</button>
+<br>
+<button mat-stroked-button (click)="register()">Register</button>

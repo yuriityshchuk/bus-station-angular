@@ -1,5 +1,4 @@
 import {Route} from "./route";
-import {Driver} from "./driver";
 
 export class Bus {
   id: number;
@@ -11,5 +10,4 @@ export class Bus {
   currentlyUsed: boolean;
   busClass: string;
   route: Route[];
-  driver: Driver[];
 }

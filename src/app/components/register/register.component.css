@@ -6,6 +6,18 @@ input {
   color: white;
 }
 
+mat-form-field {
+}
+
 button {
+  color: white;
+}
+
+button:hover {
+  color: yellow;
+}
+
+p {
+  margin-top: 10px;
   color: white;
 }

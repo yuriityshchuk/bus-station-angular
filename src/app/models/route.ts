@@ -10,5 +10,5 @@ export class Route {
   departurePlace: City;
   numberOfPassengers: 20;
   ticket: Ticket[];
-  bus: Bus[];
+  bus: Bus;
 }

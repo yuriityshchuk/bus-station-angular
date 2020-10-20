@@ -1,12 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import {UserService} from '../../../services/user/user.service';
-import {BusService} from '../../../services/bus/bus.service';
 import {TicketService} from '../../../services/ticket/ticket.service';
-import {DriverService} from '../../../services/driver/driver.service';
-import {User} from "../../../models/user";
-import {Bus} from "../../../models/bus";
-import {Driver} from "../../../models/driver";
-import {Ticket} from "../../../models/ticket";
+
+import {User} from '../../../models/user';
+
+import {Ticket} from '../../../models/ticket';
 
 @Component({
   selector: 'app-main',
